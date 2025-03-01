@@ -33,7 +33,7 @@
     </header>
     <main class="container mx-auto">
         <div class="flex justify-between gap-5 mt-5">
-            <section class="bg-white w-4/5 rounded-lg">
+            <section class="bg-white w-[75%] rounded-lg">
                 <div class="flex justify-between p-4 border-b border-dashed border-cyan-300 pb-5">
                     <div class="flex items-center gap-4 bg-[#f4f7ff] py-3 px-10 rounded-lg">
                         <img class="bg-white p-3 rounded-3xl w-14" src="assets/checkbox.png" alt="">
@@ -51,7 +51,7 @@
                         <img class="bg-white p-5 rounded-3xl " src="assets/calender.png" alt="">
                         <div>
                             <span class="text-lg font-medium">Wed,</span>
-                            <h1 class="font-bold text-2xl font-bold"> Jul 28 2025 </h1>
+                            <h1 class="font-bold text-2xl font-bold"> <span id="date">Jul 28 2025</span> </h1>
                         </div>
                     </div>
                 </div>
@@ -167,21 +167,25 @@
                     </div>
                 </div>
             </section>
-            <aside class="p-4 bg-white rounded-lg px-10 pt-8 text-center">
+            <aside class="p-4 w-[25%] bg-white rounded-lg px-10 pt-8 text-center">
                 <div class="pb-5 border-b border-dashed border-cyan-300">
                     <div class="flex justify-center gap-5 py-4">
                         <img class="" src="assets/activity.png" alt="">
                         <h1 class="text-2xl font-semibold">Activity Log</h1>
                     </div>
-                    <button class="btn btn-primary bg-[#3752FD] border-none">Clear History</button>
+                    <button id="clear-history" class="btn btn-primary bg-[#3752FD] border-none">Clear History</button>
                 </div>
-                <div class="pt-5">
-                    <p class="p-2 bg-gray-200 rounded-lg text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-                </div>
-                <div class="pt-5">
-                    <p class="p-2 bg-gray-200 rounded-lg text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
+                <div id="activity-history">
+                    <div class="pt-5">
+                        <p class="p-2 bg-gray-200 rounded-lg text-start">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.</p>
+                    </div>
+                    <div class="pt-5">
+                        <p class="p-2 bg-gray-200 rounded-lg text-start">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.</p>
+                    </div>
                 </div>
             </aside>
         </div>
