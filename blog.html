@@ -30,23 +30,34 @@
         <div class="flex flex-col gap-3">
             <div class="bg-white  py-4 rounded-lg">
                 <h1 class="font-bold text-lg px-3 border-b-2 border-dashed border-gray-300 pb-2">Question-1: What are the different ways to select an element in the DOM? </h1>
-                <p class="text-gray-500 pt-2 px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum possimus rerum. Molestiae voluptate minima provident exercitationem debitis nemo.</p>
+                <p class="text-gray-500 pt-2 px-3">There are multiple way to select an element using DOM, such as: 
+                    1. document.getElementById() 
+                    2. document.getElementsByClassName() 
+                    3. document.getElementsByTagName()  
+                    4.1 document.querySelector() 
+                    4.2 document.querySelectorAll() 
+                    5. document.getElementsByName()</p>
             </div>
             <div class="bg-white  py-4 rounded-lg">
                 <h1 class="font-bold text-lg px-3 border-b-2 border-dashed border-gray-300 pb-2">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
-                <p class="text-gray-500 pt-2 px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum possimus rerum. Molestiae voluptate minima provident exercitationem debitis nemo.</p>
+                <p class="text-gray-500 pt-2 px-3">Difference between innerHTML, innerText, and textContent:
+                    innerHTML: we can get or we can set HTML directly using innerHTML.
+                    innerText: Retrieves or sets visible text inside an element.
+                    textContent: Retrieves or sets all text content, including hidden text.
+                    diffrence: innerHTML is slower, innerText is faster and it's ignore hidden content and textContent is best for performance.
+                </p>
             </div>
             <div class="bg-white  py-4 rounded-lg">
                 <h1 class="font-bold text-lg px-3 border-b-2 border-dashed border-gray-300 pb-2">Question-3: What is event delegation in the DOM?</h1>
-                <p class="text-gray-500 pt-2 px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum possimus rerum. Molestiae voluptate minima provident exercitationem debitis nemo.</p>
+                <p class="text-gray-500 pt-2 px-3">In javascript event delegation is a technic or concept where we set the event to the parent instead of child adn this leverages the bubbling phase of event propagation to handle events for child elements from the parent.</p>
             </div>
             <div class="bg-white  py-4 rounded-lg">
                 <h1 class="font-bold text-lg px-3 border-b-2 border-dashed border-gray-300 pb-2">Question-4: What is event bubbling in the DOM?</h1>
-                <p class="text-gray-500 pt-2 px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum possimus rerum. Molestiae voluptate minima provident exercitationem debitis nemo.</p>
+                <p class="text-gray-500 pt-2 px-3">Event bubbling is a mechanism of DOM. Where an event start from the target and it bubbles up to its parent or grandParents which is root of the documents.</p>
             </div>
             <div class="bg-white  py-4 rounded-lg">
                 <h1 class="font-bold text-lg px-3 border-b-2 border-dashed border-gray-300 pb-2">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
-                <p class="text-gray-500 pt-2 px-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum possimus rerum. Molestiae voluptate minima provident exercitationem debitis nemo.</p>
+                <p class="text-gray-500 pt-2 px-3">To create element we can use "document.createElement()" and then to add the created element we can use "appendChild()" finally to remove an element we canuse "remove()"</p>
             </div>
             
         </div>
