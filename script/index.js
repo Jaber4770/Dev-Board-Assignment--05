@@ -13,11 +13,15 @@ document.getElementById("clear-history").addEventListener("click", function () {
     historyContainer.innerHTML = '';
 })
 
+document.getElementById('day').innerText = new Date().toLocaleDateString('en-GB', {
+    weekday: 'long' 
+});
+
 document.getElementById('date').innerText = new Date().toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
-});;
+});
 
 
 let assignedTaskElement = document.getElementById("task-assigned");
