@@ -25,8 +25,6 @@ let assignedTask = parseInt(assignedTaskElement.innerText);
 let completedTaskElement = document.getElementById("completedTask");
 let completedTask = parseInt(completedTaskElement.innerText);
 
-
-
 const cardContainer = document.getElementById("card-container");
 cardContainer.addEventListener("click", function (e) {
     if (e.target && e.target.classList.contains("btn")) {
@@ -45,8 +43,9 @@ cardContainer.addEventListener("click", function (e) {
             assignedTaskElement.innerText = assignedTask;
             completedTask += 1;
             completedTaskElement.innerText = completedTask;
-            
+
             if (assignedTask === 0) {
+                alert(`You have successfully completed the task: ${title}`);
                 alert('🎉 Congratulations!! You Have Completed All Tasks! 🎉');
             } else {
                 alert(`You have successfully completed the task: ${title}`);
@@ -58,5 +57,7 @@ cardContainer.addEventListener("click", function (e) {
 
 });
 
-
+document.getElementById("discover-btn").addEventListener("click", function(){
+    window.location.href="blog.html";
+});
 
