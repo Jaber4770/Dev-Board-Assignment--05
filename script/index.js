@@ -9,7 +9,7 @@ document.getElementById("theme-icon").addEventListener('click', function () {
 })
 
 document.getElementById("clear-history").addEventListener("click", function () {
-    const historyContainer = document.getElementById("activity-history");
+    const historyContainer = document.getElementById("history");
     historyContainer.innerHTML = '';
 })
 
@@ -18,5 +18,45 @@ document.getElementById('date').innerText = new Date().toLocaleDateString('en-GB
     month: 'long',
     year: 'numeric'
 });;
+
+
+let assignedTaskElement = document.getElementById("task-assigned");
+let assignedTask = parseInt(assignedTaskElement.innerText);
+let completedTaskElement = document.getElementById("completedTask");
+let completedTask = parseInt(completedTaskElement.innerText);
+
+
+
+const cardContainer = document.getElementById("card-container");
+cardContainer.addEventListener("click", function (e) {
+    if (e.target && e.target.classList.contains("btn")) {
+        const card = e.target.closest(".task-box");
+
+        if (card) {
+
+            const title = card.querySelector('h2').innerText;
+            const p = document.createElement('p');
+            p.classList.add('p-2', 'bg-[#f4f7ff]', 'rounded-lg', 'text-start', "mb-2");
+            p.innerText = `You have Complete The Task ${title} at ${new Date().toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}`;
+            const historyTagParent = document.getElementById("history");
+            historyTagParent.appendChild(p);
+
+            assignedTask -= 1;
+            assignedTaskElement.innerText = assignedTask;
+            completedTask += 1;
+            completedTaskElement.innerText = completedTask;
+            
+            if (assignedTask === 0) {
+                alert('🎉 Congratulations!! You Have Completed All Tasks! 🎉');
+            } else {
+                alert(`You have successfully completed the task: ${title}`);
+            }
+
+        }
+        e.target.setAttribute("disabled", "true");
+    }
+
+});
+
 
 
